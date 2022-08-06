@@ -2,7 +2,7 @@ from dataclasses import fields
 from importlib.resources import read_binary
 from msilib.schema import ServiceInstall
 from rest_framework import serializers
-from store.serializer import CartProductSerializer, CartOrderProductSerializer
+from market.api.serializers import CartProductSerializer, CartOrderProductSerializer
 
 from .models import Cart, Order
 

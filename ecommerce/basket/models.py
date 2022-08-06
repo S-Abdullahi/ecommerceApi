@@ -1,11 +1,11 @@
 # from django.conf import _DjangoConfLazyObject
 from statistics import mode
 from django.db import models
-from store.models import Product
+from market.models import Products
 
 # Create your models here.
 class Cart(models.Model):
-    books = models.ManyToManyField(Product, blank=True, related_name='books')
+    books = models.ManyToManyField(Products, blank=True, related_name='books')
     date_created = models.DateTimeField(auto_now_add=True)
     total_price = models.IntegerField(null=True, blank=True)
     

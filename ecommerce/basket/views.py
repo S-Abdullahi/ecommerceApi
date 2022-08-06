@@ -13,12 +13,7 @@ from rest_framework.response import Response
 class CartList(generics.ListAPIView):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
-    
-    # def list(self, request):
-    #     queryset = self.get_queryset()
-    #     serializer = CartSerializer(queryset)
-    #     return Response(serializer.data)
-    
+     
 
 class CartDetail(generics.RetrieveUpdateAPIView):
     queryset = Cart.objects.all()
